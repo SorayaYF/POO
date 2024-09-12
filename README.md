@@ -67,3 +67,5 @@ Este projeto contém várias implementações de classes em Java com foco no uso
   
 - [Iniciando repositório](https://github.com/SorayaYF/POO/commit/925a23ae81b9fc46727bbdaa0cb150da917c1fb6) - Primeira configuração do projeto.
 - [Aula 01 - Conceitos de Programação Orientada a Objetos](https://github.com/SorayaYF/POO/commit/191bd678b75be9e90b503b6212282e94d69b1163) - Adicionado material da primeira aula sobre POO.
+- [Atualiza README.md](https://github.com/SorayaYF/POO/commit/4f44c4b45bd2613132bb5092171b9a9527e9fd8e) - docs: atualiza README.md com descrição do projeto e seção de commits.
+- [Refactor SonarLint](https://github.com/SorayaYF/POO/commit/4f55e56a89d3f88525169e3ebb44eb05c4e7c87b) - Ajustes para conformidade com SonarLint e remoção de código não utilizado.

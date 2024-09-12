@@ -1,4 +1,4 @@
-package br.com.ifsc.aula01.atividadeIII.parte1;
+package br.com.ifsc.aula01.atividade03.parte1;
 
 public class Poligono {
 

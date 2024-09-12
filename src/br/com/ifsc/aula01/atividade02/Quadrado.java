@@ -1,4 +1,4 @@
-package br.com.ifsc.aula01.atividadeII;
+package br.com.ifsc.aula01.atividade02;
 
 public class Quadrado {
 
@@ -18,10 +18,6 @@ public class Quadrado {
 
     public double getLado() {
         return lado;
-    }
-
-    public void setLado(double lado) {
-        this.lado = lado;
     }
 
     @Override

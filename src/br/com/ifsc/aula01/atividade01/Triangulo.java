@@ -1,4 +1,4 @@
-package br.com.ifsc.aula01.atividadeI;
+package br.com.ifsc.aula01.atividade01;
 
 public class Triangulo {
 
@@ -20,18 +20,6 @@ public class Triangulo {
 
     public double getBase() {
         return base;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setBase(double base) {
-        this.base = base;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
     }
 
     @Override

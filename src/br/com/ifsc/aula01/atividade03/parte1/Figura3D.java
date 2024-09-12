@@ -1,7 +1,7 @@
-package br.com.ifsc.aula01.atividadeIII.parte1;
+package br.com.ifsc.aula01.atividade03.parte1;
 
-import br.com.ifsc.aula01.atividadeI.Triangulo;
-import br.com.ifsc.aula01.atividadeII.Quadrado;
+import br.com.ifsc.aula01.atividade01.Triangulo;
+import br.com.ifsc.aula01.atividade02.Quadrado;
 
 public class Figura3D {
 

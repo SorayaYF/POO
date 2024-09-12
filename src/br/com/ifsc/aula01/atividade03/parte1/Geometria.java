@@ -1,13 +1,16 @@
-package br.com.ifsc.aula01.atividadeIII.parte1;
+package br.com.ifsc.aula01.atividade03.parte1;
 
-import br.com.ifsc.aula01.atividadeI.Triangulo;
-import br.com.ifsc.aula01.atividadeII.Quadrado;
+import br.com.ifsc.aula01.atividade01.Triangulo;
+import br.com.ifsc.aula01.atividade02.Quadrado;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Geometria {
 
+    private static final Logger logger = Logger.getLogger(Geometria.class.getName());
     private String nome;
     private double areaTotal;
     private List<Object> figuras;
@@ -34,8 +37,10 @@ public class Geometria {
     }
 
     public void listarFiguras() {
-        for (Object figura : figuras) {
-            System.out.println(figura.toString());
+        if (logger.isLoggable(Level.INFO)) {
+            for (Object figura : figuras) {
+                logger.info(figura.toString());
+            }
         }
     }
 

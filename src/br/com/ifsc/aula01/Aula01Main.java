@@ -1,70 +1,77 @@
 package br.com.ifsc.aula01;
 
-import br.com.ifsc.aula01.atividadeI.Triangulo;
-import br.com.ifsc.aula01.atividadeII.Quadrado;
-import br.com.ifsc.aula01.atividadeIII.parte1.Figura3D;
-import br.com.ifsc.aula01.atividadeIII.parte1.Geometria;
-import br.com.ifsc.aula01.atividadeIII.parte1.Poligono;
-import br.com.ifsc.aula01.atividadeIII.parte2.Funcionario;
-import br.com.ifsc.aula01.atividadeIII.parte2.Gerente;
-import br.com.ifsc.aula01.atividadeIII.parte2.Pessoa;
+import br.com.ifsc.aula01.atividade01.Triangulo;
+import br.com.ifsc.aula01.atividade02.Quadrado;
+import br.com.ifsc.aula01.atividade03.parte1.Figura3D;
+import br.com.ifsc.aula01.atividade03.parte1.Geometria;
+import br.com.ifsc.aula01.atividade03.parte1.Poligono;
+import br.com.ifsc.aula01.atividade03.parte2.Funcionario;
+import br.com.ifsc.aula01.atividade03.parte2.Gerente;
+import br.com.ifsc.aula01.atividade03.parte2.Pessoa;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Aula01Main {
+
+    private static final Logger logger = Logger.getLogger(Aula01Main.class.getName());
 
     public static void main(String[] args) {
 
         Triangulo triangulo = new Triangulo(10, 5);
-        System.out.println(triangulo);
-        System.out.println("Área: " + triangulo.calcularArea());
-        System.out.println("Perímetro: " + triangulo.calcularPerimetro());
+        logger.log(Level.INFO, triangulo.toString());
+        logger.log(Level.INFO, "Área: {0}", triangulo.calcularArea());
+        logger.log(Level.INFO, "Perímetro: {0}", triangulo.calcularPerimetro());
 
         Quadrado quadrado = new Quadrado(5);
-        System.out.println(quadrado);
-        System.out.println("Área: " + quadrado.calcularArea());
-        System.out.println("Perímetro: " + quadrado.calcularPerimetro());
+        logger.log(Level.INFO, quadrado.toString());
+        logger.log(Level.INFO, "Área: {0}", quadrado.calcularArea());
+        logger.log(Level.INFO, "Perímetro: {0}", quadrado.calcularPerimetro());
 
         Geometria geometria = new Geometria("Geometria Básica");
         geometria.adicionarFiguraPlana(quadrado);
         geometria.adicionarFiguraPlana(triangulo);
-        System.out.println(geometria);
-        System.out.println("Área total: " + geometria.calcularAreaTotal());
+        logger.log(Level.INFO, geometria.toString());
+        logger.log(Level.INFO, "Área total: {0}", geometria.calcularAreaTotal());
         geometria.listarFiguras();
 
         Figura3D cubo = new Figura3D(quadrado, 4);
         Figura3D piramide = new Figura3D(triangulo, 6);
-        System.out.println(cubo);
-        System.out.println("Volume do cubo: " + cubo.calcularVolume());
-        System.out.println("Área da superfície do cubo: " + cubo.calcularAreaSuperficie());
-        System.out.println(piramide);
-        System.out.println("Área da superfície da pirâmide: " + piramide.calcularAreaSuperficie());
-        System.out.println("Volume da pirâmide: " + piramide.calcularVolume());
+        logger.log(Level.INFO, cubo.toString());
+        logger.log(Level.INFO, "Volume do cubo: {0}", cubo.calcularVolume());
+        logger.log(Level.INFO, "Área da superfície do cubo: {0}", cubo.calcularAreaSuperficie());
+        logger.log(Level.INFO, piramide.toString());
+        logger.log(Level.INFO, "Área da superfície da pirâmide: {0}", piramide.calcularAreaSuperficie());
+        logger.log(Level.INFO, "Volume da pirâmide: {0}", piramide.calcularVolume());
 
         Poligono hexagono = new Poligono(6, 3);
-        System.out.println(hexagono);
-        System.out.println("Área do hexágono: " + hexagono.calcularArea());
-        System.out.println("Perímetro do hexágono: " + hexagono.calcularPerimetro());
+        logger.log(Level.INFO, hexagono.toString());
+        logger.log(Level.INFO, "Área do hexágono: {0}", hexagono.calcularArea());
+        logger.log(Level.INFO, "Perímetro do hexágono: {0}", hexagono.calcularPerimetro());
 
-        Pessoa pessoa1 = new Pessoa("João", 25, "Rua A, 123", "123.456.789-00", "(48) 99999-0000");
-        Pessoa pessoa2 = new Pessoa("Maria", 30, "Rua B, 456", "987.654.321-00", "(48) 98888-1111");
+        Pessoa pessoa1 = new Pessoa("João");
+        Pessoa pessoa2 = new Pessoa("Maria");
+        Pessoa pessoa3 = new Pessoa("José");
 
         pessoa1.falar();
         pessoa2.andar();
+        pessoa3.comer();
 
-        Funcionario funcionario1 = new Funcionario("Pedro", 35, "Rua C, 789", "111.222.333-44", "(48) 97777-2222",
-                3000.0, "Desenvolvedor", "12345", "TI", "01/01/2020");
-        Funcionario funcionario2 = new Funcionario("Ana", 40, "Rua D, 101", "555.666.777-88", "(48) 96666-3333",
-                4000.0, "Analista", "54321", "RH", "15/03/2019");
+        Funcionario funcionario1 = new Funcionario("Pedro", 3000.0, "Desenvolvedor");
+        Funcionario funcionario2 = new Funcionario("Ana", 4000.0, "Analista");
+        Funcionario funcionario3 = new Funcionario("Marta", 5000.0, "Scrum Master");
 
         funcionario1.trabalhar();
         funcionario2.receberSalario();
+        funcionario3.baterPonto();
 
-        Gerente gerente1 = new Gerente("Carlos", 45, "Rua E, 202", "999.888.777-66", "(48) 95555-4444",
-                7000.0, "Gerente de TI", "67890", "TI", "10/05/2015", 1500.0, "TI", 10, 15, "Sênior");
-        Gerente gerente2 = new Gerente("Sofia", 50, "Rua F, 303", "111.222.333-44", "(48) 94444-5555",
-                8000.0, "Gerente de RH", "98765", "RH", "20/07/2010", 2000.0, "RH", 15, 20, "Sênior");
+        Gerente gerente1 = new Gerente("Carlos", 7000.0, "Gerente de TI", "TI", 10);
+        Gerente gerente2 = new Gerente("Sofia", 8000.0, "Gerente de RH", "RH", 20);
+        Gerente gerente3 = new Gerente("Lucas", 9000.0, "Gerente de Projetos", "Projetos", 30);
 
         gerente1.gerenciarEquipe();
         gerente2.aprovarProjeto();
+        gerente3.darFeedback();
     }
 
 }
